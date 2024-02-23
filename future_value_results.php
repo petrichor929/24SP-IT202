@@ -1,7 +1,7 @@
 <?php
 //get the form from the form
 $investment = filter_input(INPUT_POST, 'investment', FILTER_VALIDATE_FLOAT);
-$interest_rate = filter_input(INPUT_POST, 'interest_rate' FILTER_VALIDATE_FLOAT);
+$interest_rate = filter_input(INPUT_POST, 'interest_rate', FILTER_VALIDATE_FLOAT);
 $years = filter_input(INPUT_POST, 'years', FILTER_VALIDATE_INT);
 
 $error_message = '';
@@ -26,7 +26,7 @@ if( $years === FALSE) {
 } else if ( $years <= 0) {
     $error_message .= 'Years must be greater than zero.'<br>;
 } else if ( $years > 30) {
-    $error_message .= 'Years must be less than 32.'<br>;
+    $error_message .= 'Years must be less than 30.'<br>;
 }
 
 //if an error message exists, go to the index page
