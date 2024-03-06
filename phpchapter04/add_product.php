@@ -1,4 +1,10 @@
 <?php
+  // DEBUGGING ONLY
+  // echo "<pre>";
+  // print_r($_POST);
+  // echo "</pre>";
+  // DEBUGGING ONLY
+
 // Get the product data
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $code = filter_input(INPUT_POST, 'code');
@@ -12,6 +18,7 @@ if ($category_id == NULL || $category_id == FALSE || $code == NULL ||
     echo "$error <br>";
     // include('error.php');
 } else {
+    // Change to database_local.php or database_njit.php
     require_once('database_local.php');
 
     // Add the product to the database  
