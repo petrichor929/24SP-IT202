@@ -1,0 +1,76 @@
+<html>
+    <body>
+        <h1>JavaScript Chapter 2 Example</h1>
+        <!--Slide 8-->
+        <noscript>
+            <h2>Please enable JavaScript in your browser to get the most out of this
+                website.</h2>
+        </noscript>
+        <script>
+        document.write("JavaScript is enabled.");
+        document.write("<br>");
+        // Slide 26
+        let name = "Joseph"; // string value of "Joseph"
+        console.log("name = " + name);
+        let age = 50;
+        age = age + 1;
+        age +=1;
+        console.log("age = " + age);
+        // Slide 27
+        const count = 1;
+        console.log("count = " + count);
+       // count = count + 1; Gives TypeError
+        console.log("count = " + count);
+        // Slide 29
+        // delcare using "var"
+        console.log("value1 = " + value1);
+        var value1 = "value one";
+        console.log("value1 = " + value1);
+        // delcare using "let"
+        // console.log("value2 = " + value2); gives ReferenceError
+        let value2 = "value two";
+        console.log("value2 = " + value2);
+        // Slide 34
+        const width = 4.25;
+        document.write("Width = " + width);
+        document.write("<br>");
+        const length = 8.5;
+        document.write("Length = " + length);
+        document.write("<br>");
+        const perimeter = (2 * width) + (2 * length);
+        document.write("Perimeter = " + perimeter);
+        document.write("<br>");
+        // SLide 37
+        const subtotal = 74.95;
+        const salesTax = subtotal * 0.1;
+        console.log("salesTax = " + salesTax);
+        console.log("salesTax = " + salesTax.toFixed(14));
+        console.log("salesTax = " + parseFloat(salesTax.toFixed(14)));
+        // Slide 40
+        const firstName = "Grace";
+        const lastName = "Hopper";
+        // concatenate with the + operator
+        const name1 = lastName +", " + firstName;
+        document.write(name1);
+        document.write("<br>");
+        // concatenate with a template literal
+        const name2 = `${lastName}, ${firstName}`;
+        document.write(name2);
+        document.write("<br>");
+        // Slide 47
+        window.alert("This is a test of the alert method.")
+        // Slide 48
+        const userEntry = window.prompt("This is a test of the prompt method", 100);
+        console.log("userEntry = " + userEntry);
+        // Slide 49
+        alert(window.location);
+        // Slide 51
+        let entry = prompt("Enter any value", 123.456);
+        entry = parseInt(entry);
+        console.log("enter = " + entry);
+        // Slide 53
+        const today = new Date();
+        document.write("Today's date is " + today.toDateString());
+        </script>
+    </body>
+</html>
