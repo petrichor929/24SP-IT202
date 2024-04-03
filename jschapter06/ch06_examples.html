@@ -1,0 +1,66 @@
+<html>
+  <body>
+    <!-- Slide 8 HTML -->
+    <span><b>Welcome </b><u>Back</u><i> Sam!</i></span>
+    <script>
+      // Slide 8 JavaScript
+      const spanElement = document.querySelector("span");
+      console.log("span element = " + spanElement);
+      console.log(spanElement);
+      // bold "Welcome" element
+      const boldElement = spanElement.firstChild;
+      console.log("bold element = " + boldElement);
+      console.log(boldElement);
+      const welcomeText = spanElement.firstChild.firstChild;
+      console.log("welcome text = " + welcomeText);
+      console.log(welcomeText);
+      // underlined "Back" element
+      const underlinedElement = spanElement.firstChild.nextElementSibling;
+      console.log("underlined element = " + underlinedElement);
+      console.log(underlinedElement);
+      const backText = spanElement.firstChild.nextElementSibling.firstChild;
+      console.log("back text = " + backText);
+      console.log(backText);
+      // text of the bold "Welcome" element
+      console.log(spanElement.firstChild.textContent);
+      spanElement.firstChild.textContent = "Hurry ";
+    </script>
+    <!-- Slide 13 HTML -->
+    <ul id="image_list">
+      <li><img src="lion.jpg" width="160" height="106" id="imageA" /></li>
+      <li><img src="tiger.jpg" width="160" height="106" id="imageB" /></li>
+      <li><img src="lion.jpg" width="160" height="106" id="imageC" /></li>
+    </ul>
+    <script>
+      // Slide 13 JavaScript
+      const list = document.querySelector("#image_list");
+      const items = list.querySelectorAll("li");
+      for(let item of items) {
+        console.log(item.firstChild.id);
+        console.log(item.firstChild.src);
+      }
+      const imageCElement = document.querySelector("#imageC");
+      console.log("image C src = " + imageCElement.getAttribute("src"));
+      imageCElement.setAttribute("src", "puma.jpg");
+    </script>
+    <!-- Slide 21 Embeded CSS -->
+    <style>
+      .blue {
+        color: blue;
+      }
+      .red {
+        color: red;
+      }
+    </style>
+    <!-- Slide 21 HTML -->
+    <h2>Welcome to our website!</h2>
+    <script>
+      // Slide 12 JavaScript
+      const heading2 = document.querySelector("h2");
+      heading2.classList.add("blue");
+      heading2.classList.replace("blue", "red");
+      heading2.classList.remove("red");
+      console.log(heading2);
+    </script>
+  </body>
+</html>
