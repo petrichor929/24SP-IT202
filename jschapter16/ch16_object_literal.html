@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <script>
+            //Slide 5
+            const invoice = {
+                taxRate: 0.0875,       //property
+                getTotal(subtotal){
+                    const salesTax = subtotal * this.taxRate;
+                    return subtotal + salesTax;
+                },
+                terms: {
+                    dueDays: 30,
+                    description: "Net due 30 days"
+                },
+                getTax: function(subtotal) {
+                    return subtotal * this.taxRate;
+                }
+            }
+            //Slide 6
+            document.write("Tax Rate: " + invoice.taxRate);
+            document.write("<br>");
+            const subtotal = 100;
+            document.write("Subtotal: " + subtotal);
+            document.write("<br>");
+            const total = invoice.getTotal(subtotal);
+            document.write("Total: " + total);
+            document.write("<br>");
+            document.write("Due Days: " + invoice.terms.dueDays);
+            document.write("<br>");
+            document.write("Description: " + invoice.terms.description);
+            document.write("<br>");
+            document.write("Tax: " + invoice.getTax(100));
+        </script>
+    </body>
+</html>
